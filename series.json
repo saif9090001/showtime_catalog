@@ -11,10 +11,7 @@
         "css_hide": [
           "css_hide": [
             "css_hide": [
-  /* أشياء عامة */
   "header","footer","nav",".navbar",".menu",".top-bar",".bottom-bar",
-
-  /* أزرار التصنيفات الصفر (غالباً روابط داخل أزرار) */
   "button",
   "a.btn",
   "a.button",
