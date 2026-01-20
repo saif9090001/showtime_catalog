@@ -1,18 +1,10 @@
 [
   {
-    "id": "k1",
-    "title": "شارع الأعشى",
-    "poster": "https://i.ibb.co/0V6yz4wS/image.jpg",
+    "id": "s1",
+    "title": "مصدر مسلسلات alooy tv",
+    "poster": "https://i.ibb.co/Vc5ZVDWz/Chat-GPT-Image",
     "sources": [
-      { "type": "web", "url": "https://saif9090001.github.io/showtime_catalog/pages/ramadan-kleeji-2025.html" }
-    ]
-  },
-  {
-    "id": "i1",
-    "title": "مسلسلات عراقية",
-    "poster": "https://i.imgur.com/XXXX.jpeg",
-    "sources": [
-      { "type": "web", "url": "https://saif9090001.github.io/showtime_catalog/pages/iraqi-series.html" }
+      { "type": "web", "url": "https://m.alooytv6.xyz/" }
     ]
   }
 ]
