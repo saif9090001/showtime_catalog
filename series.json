@@ -1,10 +1,22 @@
-[
-  {
-    "id": "s1",
-    "title": "مسلسلات رمضان الخليجيه 2025",
-    "poster": "https://i.ibb.co/0V6yz4wS/image.jpg",
-    "sources": [
-      { "type": "web", "url": "https://m.alooytv6.xyz/genre/ramadan-kleeji-2025.html" }
-    ]
-  }
-]
+{
+  "id": "ramadan_kleeji_2025",
+  "title": "رمضان كليجي 2025",
+  "poster": "https://i.imgur.com/XXXXXXX.jpg",
+  "sources": [
+    {
+      "type": "web",
+      "url": "https://m.alooytv6.xyz/genre/ramadan-kleeji-2025.html",
+      "clean": true,
+      "css_hide": [
+        "header",
+        "footer",
+        "nav",
+        ".navbar",
+        ".menu",
+        ".ads",
+        ".popup",
+        ".banner"
+      ]
+    }
+  ]
+}
