@@ -9,6 +9,64 @@
         "url": "https://m.alooytv6.xyz/genre/ramadan-kleeji-2025.html",
         "clean": true,
         "css_hide": [
+          "css_hide": [
+            "css_hide": [
+  /* أشياء عامة */
+  "header","footer","nav",".navbar",".menu",".top-bar",".bottom-bar",
+
+  /* أزرار التصنيفات الصفر (غالباً روابط داخل أزرار) */
+  "button",
+  "a.btn",
+  "a.button",
+  ".btn",
+  ".button",
+  ".btn-group",
+  ".buttons",
+  ".tags",
+  ".tag",
+  ".categories",
+  ".category",
+  ".filters",
+  ".filter",
+
+  /* مربع البحث */
+  "form",
+  "input[type='search']",
+  "input[placeholder*='بحث']",
+  "input[placeholder*='search']",
+  ".search",
+  ".search-box",
+  ".search-bar",
+
+  /* سطر التصنيفات/روابط “مسلسلات خليجية…” */
+  "a[href*='genre']",
+  "a[href*='category']",
+  "a[href*='ramadan']"
+]
+
+  "footer",
+  ".footer",
+  "#footer",
+  ".copyright",
+  ".copy",
+  ".social",
+  ".socials",
+  ".soclinks",
+  ".follow",
+  ".follow-us",
+  "a[href*='t.me']",
+  "a[href*='telegram']",
+  "a[href*='twitter']",
+  "a[href*='x.com']",
+  "a[href*='snap']",
+  "a[href*='snapchat']",
+  ".bottom-menu",
+  ".bottom-nav",
+  ".fixed-bottom",
+  ".sticky-footer",
+  ".nav-bottom",
+  ".menu-bottom"
+]
           "header","footer","nav",".navbar",".menu",
           ".top-bar",".bottom-bar",
           ".category",".categories",".filter",".filters",
