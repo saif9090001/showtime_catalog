@@ -5,7 +5,7 @@
   "sources": [
     {
       "type": "web",
-      "url": "https://github.com/saif9090001/showtime_catalog/blob/main/pages/ramadan-kleeji-2025.html",
+      "url": "https://raw.githubusercontent.com/saif9090001/showtime_catalog/refs/heads/main/pages/ramadan-kleeji-2025.html",
       "clean": true,
       "css_hide": [
         "header",
