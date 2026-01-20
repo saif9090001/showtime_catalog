@@ -1,0 +1,10 @@
+[
+  {
+    "id": "s1",
+    "title": "مسلسل 1",
+    "poster": "https://i.imgur.com/yyyy.jpg",
+    "sources": [
+      { "type": "web", "url": "https://example.com/watch/series1" }
+    ]
+  }
+]
