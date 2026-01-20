@@ -1,8 +1,10 @@
-{
-  "id": "m2",
-  "title": "فيلم 2",
-  "poster": "https://i.imgur.com/AbCdEfG.jpg",
-  "sources": [
-    { "type": "web", "url": "https://vidhls.com/player/index.php?data=bfd6bb38a2386fbab71d56ecdb552b42" }
-  ]
-}
+[
+  {
+    "id": "s1",
+    "title": "فيلم",
+    "poster": "https://i.imgur.com/yyyy.jpg",
+    "sources": [
+      { "type": "web", "url": "https://vidhls.com/player/index.php?data=bfd6bb38a2386fbab71d56ecdb552b42" }
+    ]
+  }
+]
