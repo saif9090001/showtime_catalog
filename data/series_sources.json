@@ -1,16 +1,16 @@
 [
   {
-    "name": "AlooyTV",
+    "name": "المصدر الاول",
     "sections": [
       { "title": "رمضان خليجي 2025", "url": "https://m.alooytv6.xyz/genre/ramadan-kleeji-2025.html" },
       { "title": "رمضان عربي 2025", "url": "https://m.alooytv6.xyz/genre/ramadan-arab-2025.html" }
     ]
   },
   {
-    "name": "MyCima",
+    "name": "المصدر الثاني",
     "sections": [
-      { "title": "مسلسلات", "url": "https://mycima.direct/series" },
-      { "title": "أفلام", "url": "https://mycima.direct/movies" }
+      { "title": "مسلسلات", "url": "https://mycima.direct" },
+      { "title": "أفلام", "url": "https://mycima.direct" }
     ]
   }
 ]
