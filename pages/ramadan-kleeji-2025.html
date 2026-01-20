@@ -2,35 +2,157 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>رمضان كليجي 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>رمضان خليجي 2025</title>
   <style>
-    body{margin:0;background:#0F172A;color:#fff;font-family:Tahoma,Arial}
-    .top{position:sticky;top:0;background:#111C33;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
-    .top h1{margin:0;font-size:16px}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:12px}
-    @media(min-width:900px){.grid{grid-template-columns:repeat(5,1fr)}}
-    .card{background:#111C33;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff}
-    .poster{aspect-ratio:2/3;background:#0b1220;display:block;width:100%;object-fit:cover}
-    .meta{padding:10px}
-    .title{font-weight:700;font-size:13px;line-height:1.4;min-height:36px}
-    .badge{display:inline-block;margin-top:8px;font-size:11px;opacity:.8}
+    :root { color-scheme: dark; }
+    body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial; background:#0b1220; color:#fff; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11,18,32,.92); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      padding: 14px 14px 10px;
+    }
+    .title { font-size: 18px; font-weight: 800; margin:0 0 10px; }
+    .search {
+      width: 100%; box-sizing: border-box;
+      padding: 12px 12px; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06); color:#fff; outline: none;
+    }
+    .wrap { padding: 14px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    }
+    .card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform .08s ease;
+    }
+    .card:active { transform: scale(.98); }
+    .poster {
+      width: 100%;
+      aspect-ratio: 2/3;
+      object-fit: cover;
+      display:block;
+      background: #111827;
+    }
+    .meta { padding: 10px 10px 12px; }
+    .name { font-size: 13px; font-weight: 700; line-height: 1.2; height: 32px; overflow: hidden; }
+    .hint { font-size: 12px; opacity: .7; margin-top: 6px; }
+    .status { padding: 20px; opacity: .75; }
+    a { color: inherit; text-decoration: none; }
   </style>
 </head>
+
 <body>
-  <div class="top">
-    <h1>رمضان كليجي 2025</h1>
+  <div class="topbar">
+    <p class="title">رمضان خليجي 2025</p>
+    <input id="q" class="search" placeholder="ابحث عن مسلسل..." />
   </div>
 
-  <div class="grid">
-    <!-- كرر هذا الكارت لكل مسلسل -->
-    <a class="card" href="https://m.alooytv6.xyz/watch/448a0fffb104.html">
-      <img class="poster" src="ضع_رابط_البوستر" alt="مسلسل" />
-      <div class="meta">
-        <div class="title">مسلسل شارع الاعشى</div>
-        <div class="badge">اضغط للمشاهدة</div>
-      </div>
-    </a>
+  <div class="wrap">
+    <div id="status" class="status">جاري التحميل...</div>
+    <div id="grid" class="grid" style="display:none"></div>
   </div>
+
+<script>
+  // عدّل هذا إذا غيرت اسم الريبو/المستخدم
+  const SERIES_JSON =
+    "https://raw.githubusercontent.com/saif9090001/showtime_catalog/refs/heads/main/series.json";
+
+  function pickPoster(item){
+    // poster من json، وإذا ما موجود نخلي placeholder
+    return item.poster && String(item.poster).trim().length
+      ? item.poster
+      : "https://via.placeholder.com/300x450?text=No+Poster";
+  }
+
+  function pickUrl(item){
+    // ياخذ أول source.url
+    if (!item.sources || !item.sources.length) return "";
+    return item.sources[0].url || "";
+  }
+
+  async function load(){
+    const status = document.getElementById("status");
+    const grid = document.getElementById("grid");
+
+    try{
+      const res = await fetch(SERIES_JSON, { cache: "no-store" });
+      if(!res.ok) throw new Error("HTTP " + res.status);
+
+      const data = await res.json();
+      if(!Array.isArray(data)) throw new Error("JSON لازم يكون Array");
+
+      // نعرض فقط العناصر اللي عنوانها/رابطها موجود
+      const items = data.filter(x => (x && x.title && pickUrl(x)));
+
+      window.__items = items;
+
+      render(items);
+      status.style.display = "none";
+      grid.style.display = "grid";
+    }catch(e){
+      status.textContent = "خطأ: " + e.message;
+      console.error(e);
+    }
+  }
+
+  function render(list){
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    list.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.onclick = () => {
+        // يفتح داخل WebView لأن هذا داخل التطبيق
+        location.href = pickUrl(item);
+      };
+
+      const img = document.createElement("img");
+      img.className = "poster";
+      img.loading = "lazy";
+      img.src = pickPoster(item);
+
+      const meta = document.createElement("div");
+      meta.className = "meta";
+
+      const name = document.createElement("div");
+      name.className = "name";
+      name.textContent = item.title;
+
+      const hint = document.createElement("div");
+      hint.className = "hint";
+      hint.textContent = "اضغط لفتح الصفحة";
+
+      meta.appendChild(name);
+      meta.appendChild(hint);
+
+      card.appendChild(img);
+      card.appendChild(meta);
+
+      grid.appendChild(card);
+    });
+  }
+
+  document.getElementById("q").addEventListener("input", (e) => {
+    const v = e.target.value.toLowerCase().trim();
+    const items = window.__items || [];
+    if(!v) return render(items);
+    render(items.filter(x => String(x.title).toLowerCase().includes(v)));
+  });
+
+  load();
+</script>
 </body>
 </html>
