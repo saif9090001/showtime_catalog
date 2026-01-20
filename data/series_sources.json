@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "updated_at": "2026-01-20",
+  "sources": [
+    {
+      "id": "alooytv",
+      "name": "AlooyTV",
+      "logo": "https://www.google.com/s2/favicons?sz=128&domain=m.alooytv6.xyz",
+      "categories": [
+        { "id": "home", "title": "الرئيسية", "url": "https://m.alooytv6.xyz/" }
+      ]
+    },
+    {
+      "id": "mycima",
+      "name": "MyCima",
+      "logo": "https://www.google.com/s2/favicons?sz=128&domain=mycima.direct",
+      "categories": [
+        { "id": "home", "title": "الرئيسية", "url": "https://mycima.direct/" }
+      ]
+    }
+  ]
+}
