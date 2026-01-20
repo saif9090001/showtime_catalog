@@ -1,24 +1,20 @@
-[
-  {
-    "id": "ramadan_kleeji_2025",
-    "title": "رمضان كليجي 2025",
-    "poster": "https://i.imgur.com/yyyy.jpg",
-    "sources": [
-      {
-        "type": "web",
-        "url": "https://saif9090001.github.io/showtime_catalog/pages/ramadan-kleeji-2025.html",
-        "clean": true,
-        "css_hide": [
-          "header",
-          "footer",
-          "nav",
-          ".navbar",
-          ".menu",
-          ".ads",
-          ".popup",
-          ".banner"
-        ]
-      }
-    ]
-  }
-]
+{
+  "id": "ramadan_kleeji_2025",
+  "title": "رمضان كليجي 2025",
+  "poster": "https://i.imgur.com/xxxxx.jpg",
+  "sources": [
+    {
+      "type": "web",
+      "url": "https://m.alooytv6.xyz/genre/ramadan-kleeji-2025.html",
+      "clean": true,
+      "css_hide": [
+        "header","footer","nav",".navbar",".menu",".top-bar",".bottom-bar",
+        ".category",".categories",".filter",".filters",".buttons",".btn-group",".tag",".tags",
+        "input[type='search']","form",".search",".search-box",".search-bar",
+        "a[href*='instagram']","a[href*='insta']",
+        "a[href*='download']",".download",".btn-download",".download-btn",
+        ".episodes",".episode",".ep",".season",".seasons",".tabs",".tab",".list",".playlist"
+      ]
+    }
+  ]
+}
