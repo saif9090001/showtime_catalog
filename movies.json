@@ -1,0 +1,10 @@
+[
+  {
+    "id": "m1",
+    "title": "فيلم 1",
+    "poster": "https://i.imgur.com/xxxx.jpg",
+    "sources": [
+      { "type": "web", "url": "https://example.com/watch/film1" }
+    ]
+  }
+]
