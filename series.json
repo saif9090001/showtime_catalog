@@ -2,29 +2,17 @@
   {
     "id": "ramadan_kleeji_2025",
     "title": "رمضان خليجي 2025",
-    "poster": "https://i.imgur.com/0KFBHTB.jpeg",
+    "poster": "https://i.imgur.com/xxxx.jpg",
     "sources": [
-      {
-        "type": "web",
-        "url": ""url": "https://saif9090001.github.io/showtime_catalog/pages/ramadan-kleeji-2025.html",
-        "clean": true,
-        "css_hide": [
-          "header","footer","nav",
-          ".navbar",".menu",".top-bar",".bottom-bar",
-          ".footer","#footer",".copyright",".copy",
-          ".social",".socials",".soclinks",".follow",".follow-us",
-          ".bottom-menu",".bottom-nav",".fixed-bottom",".sticky-footer",".nav-bottom",".menu-bottom",
-          "button","a.btn","a.button",".btn",".button",".btn-group",".buttons",
-          ".tags",".tag",".categories",".category",".filters",".filter",
-          "form","input[type='search']","input[placeholder*='بحث']","input[placeholder*='search']",
-          ".search",".search-box",".search-bar",
-          "a[href*='instagram']",
-          "a[href*='download']",".download",".btn-download",
-          "a[href*='t.me']","a[href*='telegram']","a[href*='twitter']","a[href*='x.com']",
-          "a[href*='snap']","a[href*='snapchat']",
-          "[style*='position: fixed']","[style*='position:fixed']",".fixed",".sticky"
-        ]
-      }
+      { "type": "web", "url": "https://saif9090001.github.io/showtime_catalog/pages/ramadan-kleeji-2025.html" }
+    ]
+  },
+  {
+    "id": "iraqi",
+    "title": "مسلسلات عراقية",
+    "poster": "https://i.imgur.com/yyyy.jpg",
+    "sources": [
+      { "type": "web", "url": "https://saif9090001.github.io/showtime_catalog/pages/iraqi-series.html" }
     ]
   }
 ]
