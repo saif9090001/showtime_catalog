@@ -1,0 +1,5 @@
+{
+  "movies_url": "https://raw.githubusercontent.com/saif9090001/showtime_catalog/main/movies.json",
+  "series_url": "https://raw.githubusercontent.com/saif9090001/showtime_catalog/main/series.json",
+  "updated_at": "2026-01-20"
+}
