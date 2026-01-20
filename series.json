@@ -1,24 +1,18 @@
 [
   {
-    "id": "kleeji_2025",
-    "title": "رمضان خليجي 2025",
-    "poster": "https://i.imgur.com/xxxxx.jpg",
-    "url": "https://saif9090001.github.io/showtime_catalog/pages/ramadan-kleeji-2025.html",
-    "clean": true,
-    "css_hide": [
-      "header","footer",".top-bar",".bottom-bar",".navbar",".menu",
-      ".social",".copyright",".follow",".tabs_btns",".tabs_btns *"
+    "id": "k1",
+    "title": "شارع الأعشى",
+    "poster": "https://i.ibb.co/0V6yz4wS/image.jpg",
+    "sources": [
+      { "type": "web", "url": "https://saif9090001.github.io/showtime_catalog/pages/ramadan-kleeji-2025.html" }
     ]
   },
   {
-    "id": "iraqi",
+    "id": "i1",
     "title": "مسلسلات عراقية",
-    "poster": "https://i.imgur.com/yyyyy.jpg",
-    "url": "https://saif9090001.github.io/showtime_catalog/pages/iraqi.html",
-    "clean": true,
-    "css_hide": [
-      "header","footer",".top-bar",".bottom-bar",".navbar",".menu",
-      ".social",".copyright",".follow"
+    "poster": "https://i.imgur.com/XXXX.jpeg",
+    "sources": [
+      { "type": "web", "url": "https://saif9090001.github.io/showtime_catalog/pages/iraqi-series.html" }
     ]
   }
 ]
